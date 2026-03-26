@@ -1,0 +1,288 @@
+/* ─────────────────────────────────────────────
+   @owlstack/emoji-picker — Default Styles
+   All values use CSS custom properties so
+   consumers can theme without writing overrides.
+   ───────────────────────────────────────────── */
+
+/* ── Root ── */
+.ep-root {
+  --ep-bg: #fff;
+  --ep-border: #e5e7eb;
+  --ep-text: #1f2937;
+  --ep-text-secondary: #6b7280;
+  --ep-hover-bg: #f3f4f6;
+  --ep-active-bg: #e5e7eb;
+  --ep-input-bg: #f9fafb;
+  --ep-input-border: #d1d5db;
+  --ep-radius: 8px;
+  --ep-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--ep-radius);
+  border: 1px solid var(--ep-border);
+  background: var(--ep-bg);
+  color: var(--ep-text);
+  font-family: var(--ep-font-family);
+  box-sizing: border-box;
+}
+
+.ep-root *,
+.ep-root *::before,
+.ep-root *::after {
+  box-sizing: border-box;
+}
+
+/* ── Dark theme ── */
+.ep-root[data-theme="dark"] {
+  --ep-bg: #1f2937;
+  --ep-border: #374151;
+  --ep-text: #f9fafb;
+  --ep-text-secondary: #9ca3af;
+  --ep-hover-bg: #374151;
+  --ep-active-bg: #4b5563;
+  --ep-input-bg: #111827;
+  --ep-input-border: #4b5563;
+}
+
+/* ── Auto theme (follows prefers-color-scheme) ── */
+@media (prefers-color-scheme: dark) {
+  .ep-root:not([data-theme]) {
+    --ep-bg: #1f2937;
+    --ep-border: #374151;
+    --ep-text: #f9fafb;
+    --ep-text-secondary: #9ca3af;
+    --ep-hover-bg: #374151;
+    --ep-active-bg: #4b5563;
+    --ep-input-bg: #111827;
+    --ep-input-border: #4b5563;
+  }
+}
+
+/* ── Search ── */
+.ep-search {
+  position: relative;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.ep-search-input {
+  width: 100%;
+  height: 28px;
+  padding: 0 28px 0 10px;
+  border: 1px solid var(--ep-input-border);
+  border-radius: 6px;
+  background: var(--ep-input-bg);
+  color: var(--ep-text);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.ep-search-input::placeholder {
+  color: var(--ep-text-secondary);
+}
+
+.ep-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.ep-search-clear {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--ep-text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.ep-search-clear:hover {
+  color: var(--ep-text);
+}
+
+/* ── Category navigation ── */
+.ep-category-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 4px;
+  height: 40px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--ep-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.ep-category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.ep-category-tab {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  min-width: 32px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  transition: background 0.12s;
+  opacity: 0.6;
+}
+
+.ep-category-tab:hover {
+  background: var(--ep-hover-bg);
+  opacity: 1;
+}
+
+.ep-category-tab--active {
+  opacity: 1;
+  background: var(--ep-active-bg);
+}
+
+/* ── Emoji grid ── */
+.ep-grid-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ep-border) transparent;
+}
+
+.ep-grid-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ep-grid-scroll::-webkit-scrollbar-thumb {
+  background: var(--ep-border);
+  border-radius: 3px;
+}
+
+.ep-grid-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ep-grid-row {
+  display: flex;
+}
+
+.ep-grid-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-grid-empty-text {
+  color: var(--ep-text-secondary);
+  font-size: 13px;
+}
+
+/* ── Emoji button ── */
+.ep-emoji-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.1s, transform 0.1s;
+  line-height: 1;
+  padding: 0;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+
+.ep-emoji-btn:hover {
+  background: var(--ep-hover-bg);
+  transform: scale(1.15);
+}
+
+.ep-emoji-btn:active {
+  transform: scale(0.95);
+}
+
+.ep-emoji-btn:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+/* ── Skin tone selector ── */
+.ep-skin-tones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  border-top: 1px solid var(--ep-border);
+  height: 36px;
+}
+
+.ep-skin-tone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  transition: border-color 0.12s;
+}
+
+.ep-skin-tone-btn:hover {
+  border-color: var(--ep-border);
+}
+
+.ep-skin-tone-btn--active {
+  border-color: #3b82f6;
+}
+
+/* ── Preview bar ── */
+.ep-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  height: 44px;
+  flex-shrink: 0;
+  border-top: 1px solid var(--ep-border);
+}
+
+.ep-preview--empty {
+  justify-content: center;
+}
+
+.ep-preview-emoji {
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+
+.ep-preview-name {
+  font-size: 12px;
+  color: var(--ep-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ep-preview-hint {
+  font-size: 12px;
+  color: var(--ep-text-secondary);
+}
