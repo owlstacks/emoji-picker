@@ -1,5 +1,5 @@
 {
-  "name": "@owlstack/emoji-picker",
+  "name": "@owlstacks/emoji-picker",
   "version": "0.1.0",
   "description": "A fast, lightweight, zero-dependency emoji picker for React. Virtual scrolling, keyboard navigation, skin tones, search, and full accessibility — all under 30KB gzipped.",
   "keywords": [

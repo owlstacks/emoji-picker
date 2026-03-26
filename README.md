@@ -1,4 +1,4 @@
-# @owlstack/emoji-picker
+# @owlstacks/emoji-picker
 
 A fast, lightweight, zero-dependency emoji picker for React.
 
@@ -15,13 +15,13 @@ A fast, lightweight, zero-dependency emoji picker for React.
 
 ```bash
 # npm
-npm install @owlstack/emoji-picker
+npm install @owlstacks/emoji-picker
 
 # pnpm
-pnpm add @owlstack/emoji-picker
+pnpm add @owlstacks/emoji-picker
 
 # yarn
-yarn add @owlstack/emoji-picker
+yarn add @owlstacks/emoji-picker
 ```
 
 > Peer dependencies: `react >=18` and `react-dom >=18`.
@@ -29,8 +29,8 @@ yarn add @owlstack/emoji-picker
 ## Quick Start
 
 ```tsx
-import { EmojiPicker } from "@owlstack/emoji-picker";
-import "@owlstack/emoji-picker/styles.css";
+import { EmojiPicker } from "@owlstacks/emoji-picker";
+import "@owlstacks/emoji-picker/styles.css";
 
 function App() {
   return (
@@ -128,7 +128,7 @@ All colours use CSS custom properties. Override them on `.ep-root` or a parent:
 
 ## Comparison with emoji-picker-react
 
-| Feature | @owlstack/emoji-picker | emoji-picker-react |
+| Feature | @owlstacks/emoji-picker | emoji-picker-react |
 | --- | --- | --- |
 | Runtime dependencies | **0** | 5+ |
 | Virtual scrolling | **Built-in** | No |
