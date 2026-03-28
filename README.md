@@ -2,6 +2,15 @@
 
 A fast, lightweight, zero-dependency emoji picker for React.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/screenshot-light.png" alt="Emoji Picker Light Theme" width="350" />
+  <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/screenshot-dark.png" alt="Emoji Picker Dark Theme" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/demo.gif" alt="Emoji Picker Demo" width="600" />
+</p>
+
 - **Virtual scrolling** — renders only visible rows for buttery-smooth performance
 - **Skin tone support** — per-emoji skin tone modifiers
 - **Search** — instant filtering across names and keywords
