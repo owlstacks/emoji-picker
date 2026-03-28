@@ -1,6 +1,6 @@
 {
-  "name": "@owlstacks/emoji-picker",
-  "version": "0.1.1",
+  "name": "@alihesari/emoji-picker",
+  "version": "0.1.0",
   "description": "A fast, lightweight, zero-dependency emoji picker for React. Virtual scrolling, keyboard navigation, skin tones, search, and full accessibility — all under 30KB gzipped.",
   "keywords": [
     "emoji",
@@ -13,14 +13,14 @@
     "lightweight"
   ],
   "license": "MIT",
-  "author": "OwlStack <ali@alihesari.com>",
+  "author": "Ali Hesari <ali@alihesari.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/owlstacks/emoji-picker.git"
+    "url": "https://github.com/alihesari/emoji-picker.git"
   },
-  "homepage": "https://github.com/owlstacks/emoji-picker#readme",
+  "homepage": "https://github.com/alihesari/emoji-picker#readme",
   "bugs": {
-    "url": "https://github.com/owlstacks/emoji-picker/issues"
+    "url": "https://github.com/alihesari/emoji-picker/issues"
   },
   "type": "module",
   "main": "./dist/index.cjs",
