@@ -3,7 +3,7 @@
 A fast, lightweight, zero-dependency emoji picker for React.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/screenshot-light.png" alt="Emoji Picker Light Theme" width="350" />
+  <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/screenshot-light.png" alt="Emoji Picker Light Theme" width="350" height="349" />
   <img src="https://raw.githubusercontent.com/alihesari/emoji-picker/main/media/screenshot-dark.png" alt="Emoji Picker Dark Theme" width="350" />
 </p>
 
